@@ -7,10 +7,10 @@ import FinalCTASection from "../components/homepageComponents/finalCTASection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center min-h-screen py-2">
       <Head>
         <title>Network | Groubz</title>
-        <link rel="icon" href="/images/Logo-Transparent-BG.svg" />
+        <link rel="icon" href="./static/images/Logo-Transparent-BG.svg" />
       </Head>
       <HeroSection />
       <InformationCTASection />
