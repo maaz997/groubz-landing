@@ -16,7 +16,7 @@ const Footer = () => {
             CONTACT US
           </h2>
           <div className="flex items-center justify-center flex-row space-x-5">
-            <h3 className="font-poppins font-semibold">hello@groubz.com </h3>
+            <h3 className="font-poppins font-semibold text-[13px]">hello@groubz.com </h3>
           </div>
         </div>
         <div className="md:w-[30%] w-[100%] flex items-center justify-center flex-col space-y-5">
@@ -24,8 +24,8 @@ const Footer = () => {
             FOLLOW US
           </h2>
           <div className="flex items-center justify-center flex-row space-x-5">
-            <Facebook />
-            <Instagram />
+            <img src="/images/Facebook.png" width={"30px"} />
+            <img src="/images/instagram.png" width={"32px"} />
           </div>
         </div>
       </div>
