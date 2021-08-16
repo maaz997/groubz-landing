@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import AppleBadge from "../../static/images/app-store.svg";
 
 const FinalCTASection = () => {
@@ -9,20 +10,24 @@ const FinalCTASection = () => {
           <h2 className="font-medium text-[40px] ">Download Groubz.</h2>
           <h2 className="font-medium text-[40px] ">It's free.</h2>
           <div className="flex flex-row justify-start items-center w-[80%] pb-10 pt-10">
-            <div className="w-[41%]">
-              <AppleBadge />
-            </div>
-
-            <img
-              src="/images/google-play-badge.png"
-              width={"50%"}
-            />
+            <Link href="https://itunes.apple.com/us/app/id1530918140?mt=8">
+              <div className="w-[41%] cursor-pointer">
+                <AppleBadge />
+              </div>
+            </Link>
+            <Link href="http://play.google.com/store/apps/details?id=com.asasa.necsto">
+              <img
+                src="/images/google-play-badge.png"
+                className="cursor-pointer"
+                width={"50%"}
+              />
+            </Link>
           </div>
         </div>
       </div>
       <div className="flex items-center justify-center w-[50%]">
         <div className="w-[60%] ">
-          <img  className="max-h-[580px] " src="/images/agg-logo-per-sito.jpg" />
+          <img className="max-h-[580px] " src="/images/agg-logo-per-sito.jpg" />
         </div>
       </div>
     </div>

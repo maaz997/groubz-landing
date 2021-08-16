@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import AppleBadge from "../../static/images/app-store.svg";
 
 const InformationCTASection = () => {
@@ -38,11 +39,18 @@ const InformationCTASection = () => {
           over the world.
         </p>
         <div className="flex flex-row justify-center items-center md:w-[28%] w-[70%] gap-8 md:pb-10 md:pt-10 pb-4 pt-4">
-          <div className="w-[41%]">
-            <AppleBadge />
-          </div>
-
-          <img src="/images/google-play-badge.png" width={"50%"} />
+          <Link href="https://itunes.apple.com/us/app/id1530918140?mt=8">
+            <div className="w-[41%] cursor-pointer">
+              <AppleBadge />
+            </div>
+          </Link>
+          <Link href="http://play.google.com/store/apps/details?id=com.asasa.necsto">
+            <img
+              src="/images/google-play-badge.png"
+              className="cursor-pointer"
+              width={"50%"}
+            />
+          </Link>
         </div>
         <div className="font-montserrat font-normal text-black flex flex-row items-center">
           <p className="align-bottom text-[16px]">In the business world, </p>
