@@ -5,7 +5,7 @@ const IdeaSection = () => {
     <div className="bg-[#FCF6CC] w-[100%] flex flex-col justify-center items-center pt-[100px] pb-[30px]">
       <div className=" w-[90%]">
         <img
-          src="../../static/images/large-image-person-phone.jpg"
+          src="/images/large-image-person-phone.jpg"
           width={"100%"}
         />
       </div>

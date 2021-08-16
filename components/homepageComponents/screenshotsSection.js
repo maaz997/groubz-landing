@@ -29,7 +29,7 @@ const ScreenshotsSection = () => {
       </h2>
       <div className="flex flex-row ml-[-190px]">
         <Logo className="w-[190px] h-[190px]" />
-        <img src="../../static/images/iphone-bezel.png" className="w-[500px]" />
+        <img src="/images/iphone-bezel.png" className="w-[500px]" />
         <div className="block w-[200px] h-[200px] absolute z-[-1] ml-[335px] mt-[35px]">
           <Carousel
             responsive={responsive}
@@ -41,13 +41,13 @@ const ScreenshotsSection = () => {
           >
             <div>
               <img
-                src="../../static/images/screenshot-game.png"
+                src="/images/screenshot-game.png"
                 className="w-[200px]"
               />
             </div>
             <div>
               <img
-                src="../../static/images/screenshot-map.png"
+                src="/images/screenshot-map.png"
                 className="w-[200px]"
               />
             </div>

@@ -12,13 +12,13 @@ const HeroSection = () => {
             <AppleBadge />
           </div>
 
-          <img src="../../static/images/google-play-badge.png" width={"50%"} />
+          <img src="/images/google-play-badge.png" width={"50%"} />
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center w-[70%]">
         <img
-          src="../../static/images/OnlineChat_edited.png"
+          src="/images/OnlineChat_edited.png"
         />
       </div>
     </div>

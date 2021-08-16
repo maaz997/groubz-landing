@@ -14,7 +14,7 @@ const FinalCTASection = () => {
             </div>
 
             <img
-              src="../../static/images/google-play-badge.png"
+              src="/images/google-play-badge.png"
               width={"50%"}
             />
           </div>
@@ -22,7 +22,7 @@ const FinalCTASection = () => {
       </div>
       <div className="flex items-center justify-center w-[50%]">
         <div className="w-[60%] ">
-          <img  className="max-h-[580px] " src="../../static/images/agg-logo-per-sito.jpg" />
+          <img  className="max-h-[580px] " src="/images/agg-logo-per-sito.jpg" />
         </div>
       </div>
     </div>

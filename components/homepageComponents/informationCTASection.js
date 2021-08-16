@@ -8,19 +8,19 @@ const InformationCTASection = () => {
       <div className="flex flex-row items-center justify-center gap-[2vw]">
         <div className="bg-[#146BF6] w-[28vw] h-[320px]  flex flex-col justify-center gap-8 items-center">
           <div className="flex flex-col items-center justify-center w-[180px] h-[180px] rounded-full overflow-hidden">
-            <img src="../../static/images/app-art-0.jpg" />
+            <img src="/images/app-art-0.jpg" />
           </div>
           <h2 className="text-white text-[20px]">CREATE</h2>
         </div>
         <div className="bg-[#146BF6] w-[28vw] h-[320px]  flex flex-col justify-center gap-8 items-center">
           <div className="flex flex-col items-center justify-center w-[180px] h-[180px] rounded-full overflow-hidden">
-            <img src="../../static/images/app-art-1.jpg" />
+            <img src="/images/app-art-1.jpg" />
           </div>
           <h2 className="text-white text-[20px]">INTERACT</h2>
         </div>
         <div className="bg-[#146BF6] w-[28vw] h-[320px]  flex flex-col justify-center gap-8 items-center">
           <div className="flex flex-col items-center justify-center w-[180px] h-[180px] rounded-full overflow-hidden">
-            <img src="../../static/images/app-art-2.jpg" />
+            <img src="/images/app-art-2.jpg" />
           </div>
           <h2 className="text-white text-[20px]">CONNECT</h2>
         </div>
@@ -36,7 +36,7 @@ const InformationCTASection = () => {
             <AppleBadge />
           </div>
 
-          <img src="../../static/images/google-play-badge.png" width={"50%"} />
+          <img src="/images/google-play-badge.png" width={"50%"} />
         </div>
         <div className="font-montserrat font-normal text-black flex flex-row items-center">
           <p className="align-bottom text-[16px]">In the business world, </p>
