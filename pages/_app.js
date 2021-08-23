@@ -10,7 +10,7 @@ const TopProgressBar = dynamic(
   { ssr: false }
 );
 const GlobalStyle = createGlobalStyle`
-html{
+html {
   @font-face {
     font-family: "Comfortaa";
     src: url("/fonts/Comfortaa-VariableFont_wght.ttf") ;
@@ -35,37 +35,35 @@ html{
     font-display: block;
   }
   
-    @font-face {
-      font-family: "Avenir Bold";
-      src: url("/fonts/AvenirLTProHeavy.otf") ;
-      font-display: block;
-    }
-  
-    @font-face {
-      font-family: "Montserrat";
-      src: url("/fonts/Montserrat-Black.ttf") ;
-      font-display: block;
-    }
-  
-    @font-face {
-      font-family: "Montserrat Light";
-      src: url("/fonts/Montserrat-Light.ttf") ;
-      font-display: block;
-    }
-  
-    @font-face {
-      font-family: "Montserrat Medium";
-      src: url("/fonts/Montserrat-Medium.ttf") ;
-      font-display: block;
-    }
-  
-    @font-face {
-      font-family: "Montserrat Bold";
-      src: url("/fonts/Montserrat-Bold.ttf") ;
-      font-display: block;
-    }
+  @font-face {
+    font-family: "Avenir Bold";
+    src: url("/fonts/AvenirLTProHeavy.otf") ;
+    font-display: block;
+  }
 
-     
+  @font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Black.ttf") ;
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: "Montserrat Light";
+    src: url("/fonts/Montserrat-Light.ttf") ;
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: "Montserrat Medium";
+    src: url("/fonts/Montserrat-Medium.ttf") ;
+    font-display: block;
+  }
+
+  @font-face {
+    font-family: "Montserrat Bold";
+    src: url("/fonts/Montserrat-Bold.ttf") ;
+    font-display: block;
+  }
   @font-face {
     font-family: "Poppins";
     src: url("/fonts/Poppins-Black.ttf") ;
@@ -94,7 +92,7 @@ html{
     font-display: block;
   }
 
- 
+  
   box-sizing: border-box;
   background: #fffff;
   display:block;
