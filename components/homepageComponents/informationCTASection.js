@@ -1,113 +1,264 @@
 import React from "react";
 import Link from "next/link";
+import styled from "styled-components";
 import AppleBadge from "../../static/images/app-store.svg";
+import { Tag1, P1, P2 } from "../reusableComponents/fonts";
 
 const InformationCTASection = () => {
   return (
-    <div className="md:h-[830px] h-auto flex flex-col items-center gap-14">
-      <div className="absolute md:flex hidden bg-[#FCF6CC] z-[-1] left-0 mt-[150px] w-[100%] md:h-[680px] h-auto" />
-      <div className="flex md:flex-row flex-col items-center justify-center md:gap-[2vw] md:bg-[transparent] bg-[#146BF6] w-[100%]">
-        <div className="bg-[#146BF6] md:w-[28vw] md:h-[400px] h-[180px] flex flex-col justify-center md:items-center items-start w-[90%] gap-0 md:p-[0] p-[20px]">
-          <div className="flex flex-col items-center justify-center md:w-[180px] md:h-[180px] w-[110px] h-[110px] rounded-full overflow-hidden">
-            <img src="/images/app-art-0.jpg" />
-          </div>
-          <h2 className="text-white md:text-[20px] font-light text-[16px] ml-[22px]">
-            CREATE
-          </h2>
-        </div>
-        <div className="bg-[#146BF6] md:w-[28vw] md:h-[400px] h-[180px]  flex flex-col justify-center md:items-center items-end w-[90%] gap-80md:p-[0] p-[20px]">
-          <div className="flex flex-col items-center justify-center md:w-[180px] md:h-[180px] w-[110px] h-[110px] rounded-full overflow-hidden">
-            <img src="/images/app-art-1.jpg" />
-          </div>
-          <h2 className="text-white md:text-[20px] font-light text-[24px] mr-[2px]">
-            INTERACT
-          </h2>
-        </div>
-        <div className="bg-[#146BF6] md:w-[28vw] md:h-[400px] h-[180px]  flex flex-col justify-center md:items-center items-start w-[90%] gap08 md:p-[0] p-[20px]">
-          <div className="flex flex-col items-center justify-center md:w-[180px] md:h-[180px] w-[110px] h-[110px] rounded-full overflow-hidden">
-            <img src="/images/app-art-2.jpg" />
-          </div>
-          <h2 className="text-white md:text-[20px] font-light text-[19px] ml-[8px]">
-            CONNECT
-          </h2>
-        </div>
-      </div>
-      <div className="md:flex hidden flex-col justify-center items-center gap-2">
-        <p className="md:w-[52%] w-[90%] font-light font-poppins text-center text-[16px]">
-          Groubz is the platform where you can share your professional profile
-          in the most authentic way and interact with professionals from all
-          over the world.
-        </p>
-        <div className="flex flex-row justify-center items-center md:w-[28%] w-[70%] gap-8 md:pb-10 md:pt-10 pb-4 pt-4">
+    <Wrapper>
+      <BackgroundColorDiv />
+      <UpperDiv>
+        <BlueBoxDiv align={"start"}>
+          <IconHolderCircle>
+            <BlueBoxImg src="/images/app-art-0.jpg" />
+          </IconHolderCircle>
+          <IconHolderCircleText>
+            <Tag1 className="text-white md:text-20px font-light text-16px ml-22px">
+              CREATE
+            </Tag1>
+          </IconHolderCircleText>
+        </BlueBoxDiv>
+        <BlueBoxDiv align={"end"}>
+          <IconHolderCircle>
+            <BlueBoxImg src="/images/app-art-1.jpg" />
+          </IconHolderCircle>
+          <IconHolderCircleText>
+            <Tag1 className="text-white md:text-20px font-light text-24px mr-2px">
+              INTERACT
+            </Tag1>
+          </IconHolderCircleText>
+        </BlueBoxDiv>
+        <BlueBoxDiv align={"start"}>
+          <IconHolderCircle>
+            <BlueBoxImg src="/images/app-art-2.jpg" />
+          </IconHolderCircle>
+          <IconHolderCircleText>
+            <Tag1 className="text-white md:text-20px font-light text-19px ml-8px">
+              CONNECT
+            </Tag1>
+          </IconHolderCircleText>
+        </BlueBoxDiv>
+      </UpperDiv>
+      <LowerDiv>
+        <TextHolderDivUpper>
+          <P1 className=" font-light font-poppins text-center text-16px">
+            Groubz is the platform where you can share your professional profile
+            in the most authentic way and interact with professionals from all
+            over the world.
+          </P1>
+        </TextHolderDivUpper>
+        <DownloadButtonsHolderDiv>
           <Link href="https://itunes.apple.com/us/app/id1530918140?mt=8">
-            <div className="w-[41%] cursor-pointer">
-              <AppleBadge />
-            </div>
+            <AppleImageHolderDiv>
+              <AppleButton />
+            </AppleImageHolderDiv>
           </Link>
           <Link href="http://play.google.com/store/apps/details?id=com.asasa.necsto">
-            <img
-              src="/images/google-play-badge.png"
-              className="cursor-pointer"
-              width={"50%"}
-            />
+            <GooglePlayButtonHolderDiv>
+              <GooglePlayButton src="/images/google-play-badge.png" />
+            </GooglePlayButtonHolderDiv>
           </Link>
-        </div>
-        <div className="font-montserrat font-normal text-black flex flex-row items-center">
-          <p className="align-bottom text-[16px]">In the business world, </p>
-          <p className="align-bottom font-medium text-[32px] pb-[12px]">
-            visibility is fundamental
-          </p>
-          <p className="align-bottom text-[16px]"> but ​</p>
-        </div>
-        <p className="align-bottom font-medium text-black text-[32px] pb-2">
-          INTERACTION is key.
-        </p>
-        <div className="font-montserrat font-normal text-black flex flex-row items-center">
-          <p className="align-bottom text-[16px]">
-            Achieve your goals leveraging on a large network of professionals:
-            <strong> interact</strong> with them in Groubz.
-          </p>
-        </div>
-      </div>
-      {/* //////////////////////////////////////////////////////////////MOBILE//////////////////////////////////////////////////////////////////////////////////////// */}
-      <div className="md:hidden flex flex-col justify-center items-center gap-2 w-[95%]">
-        <p className="md:w-[52%] w-[90%] font-light font-poppins text-center text-[16px]">
-          Groubz is the platform where you can share your professional profile
-          in the most authentic way and interact with professionals from all
-          over the world.
-        </p>
-        <div className="flex flex-row justify-center items-center md:w-[28%] w-[70%] gap-8 md:pb-10 md:pt-10 pb-4 pt-4">
-          <div className="w-[41%]">
-            <AppleBadge />
-          </div>
+        </DownloadButtonsHolderDiv>
 
-          <img src="/images/google-play-badge.png" width={"50%"} />
-        </div>
-        <div className="font-montserrat font-normal text-black flex flex-row items-center">
-          <p className="align-bottom text-[16px]">In the business world, </p>
-          <p className="align-bottom font-normal text-[26px] pl-[3px] pr-[3px] pb-[8px]">
-            visibility is
-          </p>
-        </div>
-        <div className="font-montserrat font-normal text-black flex flex-row items-center">
-          <p className="align-bottom font-normal text-[26px] pl-[3px] pr-[3px] pb-[8px]">
-            fundamental
-          </p>
-          <p className="align-bottom text-[16px]"> but ​</p>
-        </div>
-
-        <p className="align-bottom font-normal text-black text-[26px] pb-2">
-          INTERACTION is key.
-        </p>
-        <div className="font-montserrat font-normal text-black flex flex-row items-center">
-          <p className="align-bottom text-center text-[16px]">
+        <TextHolderDiv>
+          <P1 className="align-bottom text-16px">
+            In the business world, <Strong1>visibility is fundamental</Strong1>{" "}
+            but
+          </P1>
+          <P1>
+            <Strong1>INTERACTION is key.</Strong1>
+          </P1>
+          <P1>
             Achieve your goals leveraging on a large network of professionals:
-            <strong> interact</strong> with them in Groubz.
-          </p>
-        </div>
-      </div>
-    </div>
+            <Strong2> interact</Strong2> with them in Groubz.
+          </P1>
+        </TextHolderDiv>
+      </LowerDiv>
+    </Wrapper>
   );
 };
 
 export default InformationCTASection;
+const Strong1 = styled.strong`
+  font-size: 40px;
+  line-height: 50px;
+  @media (max-width: 980px) {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+`;
+const Strong2 = styled.strong`
+  // font-size: 200px;
+  font-family: Avenir Medium;
+`;
+const TextHolderDivUpper = styled.div`
+  width: 52%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (max-width: 980px) {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+`;
+
+//font-montserrat font-normal text-black
+const TextHolderDiv = styled.div`
+  width: 65%;
+  gap: 20px;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 980px) {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+`;
+
+const BlueBoxImg = styled.img`
+  width: 180px;
+  height: 180px;
+`;
+
+const BackgroundColorDiv = styled.img`
+  position: absolute;
+  display: flex;
+  height: 640px;
+  background-color: #fcf6cc;
+  border: none;
+  z-index: -1;
+  left: 0;
+  margin-top: 170px;
+  width: 100%;
+  @media (max-width: 980px) {
+    display: hidden;
+    height: auto;
+  }
+`;
+
+const UpperDiv = styled.div`
+  flex-direction: row;
+  gap: 2vw;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @media (max-width: 980px) {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #146bf6;
+  }
+`;
+const BlueBoxDiv = styled.div`
+  background: #146bf6;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0;
+  align-items: center;
+  width: 28vw;
+  height: 320px;
+  gap: 40px;
+
+  @media (max-width: 980px) {
+    align-items: ${({ align }) => `flex-${align}`};
+    gap: 0px;
+    height: 100%;
+    width: 70%;
+  }
+`;
+const IconHolderCircle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  @media (max-width: 980px) {
+    width: 110px;
+    height: 110px;
+  }
+`;
+
+const IconHolderCircleText = styled.div`
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 980px) {
+    width: 110px;
+    margin-top: 20px;
+  }
+`;
+
+const LowerDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  @media (max-width: 980px) {
+    margin-top: 30px;
+  }
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 80px;
+
+  @media (max-width: 980px) {
+    margin-bottom: 0px;
+  }
+`;
+const AppleImageHolderDiv = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  cursor: pointer;
+`;
+
+const GooglePlayButtonHolderDiv = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  cursor: pointer;
+`;
+
+const GooglePlayButton = styled.img`
+  width: 140px;
+  height: 60px;
+  cursor: pointer;
+`;
+
+const AppleButton = styled(AppleBadge)`
+  width: 120px;
+  cursor: pointer;
+`;
+
+const DownloadButtonsHolderDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  @media (max-width: 980px) {
+    width: 80%;
+  }
+`;

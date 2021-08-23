@@ -1,49 +1,115 @@
 import React from "react";
-import Logo from "../../static/images/Logo-Transparent-BG.svg";
 import Link from "next/link";
+import styled from "styled-components";
+import Logo from "../../static/images/Logo-Transparent-BG.svg";
+import { HeaderLogoText, Tag3 } from "./fonts";
 
 const Footer = () => {
   return (
-    <div className="flex md:flex-row flex-col items-center justify-center w-[100%] h-[120px] ">
-      <div className="flex md:flex-row flex-col items-center justify-between w-[100%] md:gap-0 gap-8 pb-8">
-        <div className="md:w-[30%] w-[100%] flex items-center justify-center flex-row -mt-8">
-          <Logo className="w-[60px] h-[60px]" />
-          <h1 className="font-comfortaa text-[22px] -mb-1">Groubz</h1>
-        </div>
-        <div className="md:w-[30%] w-[100%] flex items-center justify-center flex-col space-y-5">
-          <h2 className="font-poppins font-semibold border-b-[1px] md:w-[15vw] w-[98%] text-center border-black">
-            CONTACT US
-          </h2>
-          <div className="flex items-center justify-center flex-row space-x-5">
-            <h3 className="font-poppins font-semibold text-[13px]">
-              hello@groubz.com{" "}
-            </h3>
-          </div>
-        </div>
-        <div className="md:w-[30%] w-[100%] flex items-center justify-center flex-col space-y-5">
-          <h2 className="font-poppins font-semibold border-b-[1px] md:w-[15vw] w-[98%] text-center border-black">
-            FOLLOW US
-          </h2>
-          <div className="flex items-center justify-center flex-row space-x-5">
+    <Wrapper>
+      <InnerWrapper>
+        <LogoDiv>
+          <LogoStyled />
+          <HeaderLogoText>Groubz</HeaderLogoText>
+        </LogoDiv>
+        <FooterLinedDiv>
+          <Tag3>CONTACT US</Tag3>
+          <FooterLinedInnerDiv>
+            <Tag3 style={{ fontSize: "12px" }}>hello@groubz.com</Tag3>
+          </FooterLinedInnerDiv>
+        </FooterLinedDiv>
+        <FooterLinedDiv>
+          <Tag3>FOLLOW US</Tag3>
+          <FooterLinedInnerDiv>
             <Link href="https://www.facebook.com/groubz/">
-              <img
-                src="/images/Facebook.png"
-                className="cursor-pointer"
-                width={"30px"}
-              />
+              <SocialImage src="/images/Facebook.png" width={"30px"} />
             </Link>
             <Link href="https://www.instagram.com/groubz_italia/">
-              <img
-                src="/images/instagram.png"
-                className="cursor-pointer"
-                width={"32px"}
-              />
+              <SocialImage src="/images/instagram.png" width={"32px"} />
             </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+          </FooterLinedInnerDiv>
+        </FooterLinedDiv>
+      </InnerWrapper>
+    </Wrapper>
   );
 };
 
 export default Footer;
+
+const LogoStyled = styled(Logo)`
+  width: 45px;
+  height: 45px;
+`;
+
+const SocialImage = styled.img`
+  cursor: pointer;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+  @media (max-width: 980px) {
+    flex-direction: column;
+  }
+`;
+
+const InnerWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8;
+  padding-bottom: 8px;
+  @media (max-width: 980px) {
+    gap: 30px;
+    flex-direction: column;
+  }
+`;
+
+const LogoDiv = styled.div`
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: -8px;
+  @media (max-width: 980px) {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+`;
+
+const FooterLinedDiv = styled.div`
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (max-width: 980px) {
+    width: 100%;
+  }
+`;
+
+const FooterLinedInnerDiv = styled.div`
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-top: 1px solid black;
+  padding-top: 20px;
+  margin-top: 5px;
+  width: 60%;
+  @media (max-width: 980px) {
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 90%;
+  }
+`;
