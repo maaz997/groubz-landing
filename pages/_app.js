@@ -5,7 +5,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const TopProgressBar = dynamic(
   () => {
-    return import("../components/reusableComponents/TopProgressBar");
+    return import("../components/reusableComponents/topProgressBar");
   },
   { ssr: false }
 );
