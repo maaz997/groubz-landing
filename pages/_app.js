@@ -100,8 +100,6 @@ html {
   width:100vw;
   margin:auto;
   padding: auto; 
-  overflow-x: hidden;
-  overflow-y: overlay;
 }
 
 body {
