@@ -32,7 +32,7 @@ const Header = () => {
           <HeaderLogoText>Groubz</HeaderLogoText>
         </LogoHolder>
         <SocialButtonsHolder>
-          <ButtonHolderDiv
+          {/* <ButtonHolderDiv
             mobileDisabled
             onClick={() => {
               setLoginModalEnabled(true);
@@ -51,7 +51,7 @@ const Header = () => {
             <LoginButton>
               <HeaderLogoText>Sign Up</HeaderLogoText>
             </LoginButton>
-          </ButtonHolderDiv>
+          </ButtonHolderDiv> */}
 
           <Link href="https://www.facebook.com/groubz/">
             <ButtonHolderDiv>

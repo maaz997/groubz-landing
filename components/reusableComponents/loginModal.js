@@ -4,6 +4,7 @@ import styled from "styled-components";
 import FacebookCircle from "../../static/images/facebook-circle.svg";
 import GoogleCircle from "../../static/images/google-circle.svg";
 import LinkdinCircle from "../../static/images/linkdin-circle.svg";
+import { useRouter } from "next/router";
 
 import { H2, Tag3 } from "./fonts";
 const customStyles = {
@@ -18,6 +19,12 @@ const customStyles = {
   },
 };
 const LoginModal = ({ enabled, setEnabled }) => {
+  const router = useRouter();
+  const handleRerouteClick = (e, href) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   const [opacity, setOpacity] = React.useState(0);
   React.useEffect(() => {
     document.body.style.overflowY = "hidden";
@@ -42,22 +49,28 @@ const LoginModal = ({ enabled, setEnabled }) => {
       contentLabel="Example Modal"
     >
       <ModalMainDiv opacity={opacity}>
-        <H2 style={{ color: "#1890ff", paddingBottom: "80px" }}>Login</H2>
+        <H2 style={{ color: "#1890ff", paddingBottom: "60px" }}>Login</H2>
         <UpperSectionDiv>
           <FieldHolderDiv>
             <Tag3>Email</Tag3>
-            <StyledInput type="email" />
+            <StyledInput type="email" placeholder="Type your email" />
           </FieldHolderDiv>
           <FieldHolderDiv>
             <Tag3>Password</Tag3>
-            <StyledInput type="password" />
+            <StyledInput type="password" placeholder="Type your password" />
           </FieldHolderDiv>
         </UpperSectionDiv>
         <MidSectionDiv>
           <MiniText active>Forgot Password?</MiniText>
         </MidSectionDiv>
         <LowerSectionDiv>
-          <ModalStyledButton>Let's Go!</ModalStyledButton>
+          <ModalStyledButton
+            onClick={(e) => {
+              handleRerouteClick(e, "/feed");
+            }}
+          >
+            Let's Go!
+          </ModalStyledButton>
           <MiniText>Or Sign Up Using</MiniText>
           <SocialButtonsDiv>
             <FacebookStyled />
@@ -117,6 +130,9 @@ const ModalStyledButton = styled.button`
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   background-size: 200% auto;
   color: white;
   &:hover {
@@ -178,6 +194,10 @@ const UpperSectionDiv = styled.div`
   align-items: center;
 `;
 const StyledInput = styled.input`
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   border: none;
   outline: none;
   height: 30px;
@@ -187,11 +207,19 @@ const StyledInput = styled.input`
   &:focus {
     color: #1890ff;
     border-bottom: 1px solid #1890ff;
+
+    &::placeholder {
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      color: #1890ff;
+    }
   }
-  -moz-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  &::placeholder {
+    color: #cccccc;
+  }
+
   margin: 0;
   padding: 0;
   font-family: Poppins SemiBold;
